@@ -135,3 +135,5 @@ ALLOWED_HOSTS = [
     'localhost',
     'todo-production-be47.up.railway.app'
 ]
+
+CSRF_TRUSTED_ORIGINS = ['']
