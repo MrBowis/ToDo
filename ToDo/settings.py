@@ -137,7 +137,7 @@ STORAGES = {
 
 ALLOWED_HOSTS = [
     'localhost',
-    'todo-production-be47.up.railway.app'
+    '*'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['']
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
