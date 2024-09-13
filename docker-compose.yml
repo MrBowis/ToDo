@@ -12,6 +12,7 @@ services:
       - "8000:8000"
     networks:
       - microservices
+      
   nginx:
     build: ./nginx
     volumes:
@@ -30,6 +31,14 @@ services:
       - microservices
     volumes:
       - static:/static
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "8002:8002"
+    networks:
+      - microservices
 
 networks:
   microservices:
