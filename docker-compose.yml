@@ -10,17 +10,10 @@ services:
       context: ./todo
     ports:
       - "8000:8000"
+    expose:
+      - "8000"
     networks:
       - microservices
-      
-  nginx:
-    build: ./nginx
-    volumes:
-      - static:/static
-    ports:
-      - "8080:8080"
-    depends_on:
-      - todo
     
   login:
     build:
