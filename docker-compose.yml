@@ -36,7 +36,7 @@ services:
     build:
       context: ./client
     ports:
-      - "8002:8002"
+      - "3000:3000"
     networks:
       - microservices
 
