@@ -1,12 +1,14 @@
 # ToDoList-Django
 
-This is a simple ToDo List application built with Django.
+This is a porject ToDo List application built with Django for the main microservice and login service, for the client use NextJS.
 
 ## Prerequisites
 
 - Python 3.x
 - pip (Python package installer)
 - virtualenv
+- Docker
+- NodeJS
 
 ## Setup
 
@@ -34,39 +36,17 @@ Windows:
 venv\Scripts\activate
 ```
 
-### 3. Install Dependencies
+### 3. Start containers
 
 ```bash
-pip install -r requirements.txt
+docker compose up --build
 ```
 
-## Database Migrations
+Visit `http://127.0.0.1:8000` in your browser to see the To Do application.
+Visit `http://127.0.0.1:8002` in your browser to see the Login application.
+Visit `http://127.0.0.1:3000` in your browser to see the Client application.
 
-### 1. Make Migrations
-
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-### 2. Create Superuser
-
-```bash
-python manage.py createsuperuser
-```
-
-## Running the Server
-
-```bash
-python manage.py runserver
-```
-
-Visit `http://127.0.0.1:8000` in your browser to see the application.
-
-## Usage
-1. Go to the URL `http://localhost:8000/`
-
-## Explanation
+## Explanation - To Do
 This project is a simple CRUD application using Django. It allows you to create, read, update and delete records from a database. The application has a two models called `Task` and `Comments` with the following fields:
 - Task
     - Task
@@ -93,6 +73,27 @@ The application also has a REST API that allows you to perform CRUD operations o
     - GET: Get the details of a specific comment
     - PUT: Update a specific comment
     - DELETE: Delete a specific comment
+
+## Explanation - Login
+
+There are three main routes for this microservice:
+
+- `/login`
+    - POST: The body use the json bellow and respose a token generate by JWT
+  {
+      "id": "", // Optional
+      "username": "",
+      "email": "",
+      "password": ""
+  }
+- `/register`
+    - POST: The body use the json bellow and respose a token generate by JWT
+  {
+      "username": "",
+      "password": ""
+  }
+- `/profile`
+    - GET: use Authentication parameter with token to obtain the data of any user who has registered 
 
 ## License
 
