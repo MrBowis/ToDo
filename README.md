@@ -80,18 +80,22 @@ There are three main routes for this microservice:
 
 - `/login`
     - POST: The body use the json bellow and respose a token generate by JWT
-  {
-      "id": "", // Optional
-      "username": "",
-      "email": "",
-      "password": ""
-  }
+```json
+{
+    "id": "", // Optional
+    "username": "",
+    "email": "",
+    "password": ""
+}
+```
 - `/register`
     - POST: The body use the json bellow and respose a token generate by JWT
-  {
-      "username": "",
-      "password": ""
-  }
+```json
+{
+    "username": "",
+    "password": ""
+}
+```
 - `/profile`
     - GET: use Authentication parameter with token to obtain the data of any user who has registered 
 
