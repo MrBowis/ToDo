@@ -79,17 +79,17 @@ The application also has a REST API that allows you to perform CRUD operations o
 There are three main routes for this microservice:
 
 - `/login`
-    - POST: The body use the json bellow and respose a token generate by JWT
+    - POST: The body use the json bellow but `id` is optional and respose a token
 ```json
 {
-    "id": "", // Optional
+    "id": "",
     "username": "",
     "email": "",
     "password": ""
 }
 ```
 - `/register`
-    - POST: The body use the json bellow and respose a token generate by JWT
+    - POST: The body use the json bellow and respose a token
 ```json
 {
     "username": "",
