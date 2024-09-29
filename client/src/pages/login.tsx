@@ -5,10 +5,10 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Divider,
   Link,
-  Image,
+  Button,
+  Input,
 } from "@nextui-org/react";
 
 const LoginPage = () => {
@@ -26,31 +26,44 @@ const LoginPage = () => {
     <div>
       <Card className="max-w-[400px]">
         <form onSubmit={handleSubmit}>
-          <CardHeader className="flex gap-3">
-            <h2 className="bg-slate-400">Login</h2>
+          <CardHeader className="w-full flex justify-center gap-3">
+            <p>Hola</p>
+            <Button
+              as={Link}
+              color="primary"
+              href="../"
+              variant="flat"
+              className="w-1/3 self-center"
+            >
+              Go Home
+            </Button>
           </CardHeader>
           <Divider />
           <CardBody>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
+            <Input
               onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
+              type="email"
+              variant="underlined"
+              label="Email"
+              className="self-center w-3/4 my-2 rounded-md ease-in-out duration-300 text-slate-900"
+            ></Input>
+            <Input
               onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <button type="submit">Login</button>
+              type="password"
+              variant="underlined"
+              label="Passsword"
+              className="self-center w-3/4 my-2 ease-in-out duration-300 text-slate-900"
+            ></Input>
+            <Button
+              as={Link}
+              color="primary"
+              variant="ghost"
+              className="w-1/3 self-center my-3"
+            >
+              Log In
+            </Button>
           </CardBody>
         </form>
-        <Link href="../"> Go Home </Link>
       </Card>
     </div>
   );

@@ -3,6 +3,7 @@
 // import axios from "axios";
 import { useState } from "react";
 import Navbar from "../components/nav";
+import LoginPage from "../pages/login";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div>
       <Navbar></Navbar>
+      <LoginPage></LoginPage>
     </div>
   );
 }
