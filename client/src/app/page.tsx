@@ -3,7 +3,6 @@
 // import axios from "axios";
 import { useState } from "react";
 import Navbar from "../components/nav";
-import LoginPage from "../pages/login";
 
 export default function Home() {
 
