@@ -27,7 +27,6 @@ const LoginPage = () => {
       <Card className="max-w-[400px]">
         <form onSubmit={handleSubmit}>
           <CardHeader className="w-full flex justify-center gap-3">
-            <p>Hola</p>
             <Button
               as={Link}
               color="primary"
@@ -45,14 +44,17 @@ const LoginPage = () => {
               type="email"
               variant="underlined"
               label="Email"
-              className="self-center w-3/4 my-2 rounded-md ease-in-out duration-300 text-slate-900"
+              color="primary"
+              className="self-center w-3/4 my-2 text-black/75"
             ></Input>
+
             <Input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               variant="underlined"
               label="Passsword"
-              className="self-center w-3/4 my-2 ease-in-out duration-300 text-slate-900"
+              color="primary"
+              className="self-center w-3/4 my-2 text-black/75"
             ></Input>
             <Button
               as={Link}
