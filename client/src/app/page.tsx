@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <div>
       <Navbar></Navbar>
-      <LoginPage></LoginPage>
     </div>
   );
 }
