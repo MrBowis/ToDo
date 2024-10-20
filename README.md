@@ -42,9 +42,9 @@ venv\Scripts\activate
 docker compose up --build
 ```
 
-- Visit `http://127.0.0.1:8000` in your browser to see the To Do application.
-- Visit `http://127.0.0.1:8002` in your browser to see the Login application.
-- Visit `http://127.0.0.1:3000` in your browser to see the Client application.
+- Visit `http://127.0.0.1:8000` in your browser to see the _**To Do**_ application.
+- Visit `http://127.0.0.1:8002` in your browser to see the _**Login**_ application.
+- Visit `http://127.0.0.1:3000` in your browser to see the _**Client**_ application.
 
 ## Explanation - To Do
 This project is a simple CRUD application using Django. It allows you to create, read, update and delete records from a database. The application has a two models called `Task` and `Comments` with the following fields:
