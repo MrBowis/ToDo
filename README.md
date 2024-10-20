@@ -16,7 +16,7 @@ This is a porject ToDo List application built with Django for the main microserv
 
 ```bash
 git clone https://github.com/yourusername/ToDoList-Django.git
-cd ToDoList-Django
+cd ToDo
 ```
 
 ### 2. Create and Activate Virtual Environment
